@@ -5,6 +5,45 @@
   <version>1</version>
   <vendor>Nils Reiter</vendor>
   <types>
-    <!-- TODO: Step 2 here -->
+    <typeDescription>
+      <name>de.ukoeln.idh.teaching.jml.ex09.types.Token</name>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>id</name>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+      	</featureDescription>
+      </features>	
+  	</typeDescription>
+    
+    <typeDescription>
+      <name>de.ukoeln.idh.teaching.jml.ex09.types.Sentence</name>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>id</name>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>	
+  	</typeDescription>
+    
+    <typeDescription>
+      <name>de.ukoeln.idh.teaching.jml.ex09.types.NamedEntity</name>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>NEClass</name>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>Confidence</name>
+          <rangeTypeName>uima.cas.Long</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>Source</name>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>	
+  	</typeDescription>
   </types>
 </typeSystemDescription>
