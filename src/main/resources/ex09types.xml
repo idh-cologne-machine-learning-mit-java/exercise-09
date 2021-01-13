@@ -1,10 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
-  <name>Exercise 09</name>
-  <description />
-  <version>1</version>
-  <vendor>Nils Reiter</vendor>
-  <types>
-    <!-- TODO: Step 2 here -->
-  </types>
+<typeSystemDescription
+	xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>Exercise 09</name>
+	<description />
+	<version>1</version>
+	<vendor>Nils Reiter</vendor>
+	
+	<types>
+		<!-- TOKEN -->
+		<typeDescription>
+			<name>de.ukoeln.idh.teaching.jml.ex09.types.Token</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>id</name>
+					<description />
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+
+		<!-- SENTENCE -->
+		<typeDescription>
+			<name>de.ukoeln.idh.teaching.jml.ex09.types.Sentence</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>id</name>
+					<description />
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+
+		<!-- NAMEDENTITY --> 
+		<typeDescription>
+			<name>de.ukoeln.idh.teaching.jml.ex09.types.NamedEntity</name>
+			<description />
+			<supertypeName>uima.tcas.Annotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>NEClass</name>
+					<description>to distinguish between person, organization etc.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+
+				<featureDescription>
+					<name>Confidence</name>
+					<description>to store the probability from an NE recognizer</description>
+					<rangeTypeName>uima.cas.Float</rangeTypeName>
+				</featureDescription>
+
+				<featureDescription>
+					<name>Source</name>
+					<description>to store the name of the NER</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+	</types>
 </typeSystemDescription>
