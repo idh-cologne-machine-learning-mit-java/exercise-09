@@ -12,7 +12,7 @@
     	<features>
     		<featureDescription>
     			<name>ID</name>
-    			<desciption/>
+    			<description/>
     			<rangeTypeName>uima.cas.Integer</rangeTypeName>
     		</featureDescription>
     	</features>
