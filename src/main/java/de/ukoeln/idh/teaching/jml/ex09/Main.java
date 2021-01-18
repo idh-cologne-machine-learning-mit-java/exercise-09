@@ -11,7 +11,9 @@ public class Main {
 
 	public static void main(String[] args) throws ResourceInitializationException, CASException {
 		jcas = JCasFactory.createText("The dog barks.");
-
+		Token token = new Token(jcas);
+		token.setBegin(0);
+		token.setEnd(0);
 	}
 
 }
