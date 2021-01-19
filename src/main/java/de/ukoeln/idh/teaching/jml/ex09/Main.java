@@ -15,10 +15,27 @@ public class Main {
 	public static void main(String[] args) throws ResourceInitializationException, CASException {
 		jcas = JCasFactory.createText("The dog barks.");
 		
-		Sentence sentence = new Sentence(jcas);
-		sentence.setBegin(0);
-		sentence.setEnd(jcas.getDocumentText().length() -1);
-
+		Sentence sentence = new Sentence(jcas, 0, 14);
+		sentence.setID(0);
+		sentence.addToIndexes();
+		
+		Token token;
+		
+		token = new Token(jcas, 0, 3);
+		token.setID(0);
+		token.addToIndexes();
+		
+		token = new Token(jcas, 4, 7);
+		token.setID(1);
+		token.addToIndexes();
+		
+		token = new Token(jcas, 8, 13);
+		token.setID(2);
+		token.addToIndexes();
+		
+		token = new Token(jcas, 13, 14);
+		token.setID(2);
+		token.addToIndexes();
 	}
 
 }
